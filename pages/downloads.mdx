@@ -1,40 +1,25 @@
-import Link from 'next/link'
-import cn from 'clsx'
-import { useState } from 'react'
-import { motion } from "framer-motion"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faDownload, faCode } from '@fortawesome/free-solid-svg-icons'
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
-import { useSSG } from 'nextra/ssg'
-import Date from '../components/Date'
-import { Card, Cards } from '../components/Card/'
+import Link from "next/link";
+import cn from "clsx";
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faDownload, faCode } from "@fortawesome/free-solid-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { useSSG } from "nextra/ssg";
+import Date from "../components/Date";
+import { Card, Cards } from "../components/Card/";
 
-import { Features, Feature } from '../components/Features'
+import { Features, Feature } from "../components/Features";
 
 <div className="home-content">
   <div className="content-container">
     <h1 className="headline">Downloads</h1>
-    <p className="subtitle">Welcome to the FOSSBilling Download Page! 🎉</p>
-<p>
-    We're excited to have you here! We are on the journey towards the release of version 1.0.0, and we're working hard to make FOSSBilling ready for production use.
-    Please bear in mind a few key points as you consider downloading:
-
-    - FOSSBilling is in its dynamic pre-production phase, which means some features are still under development.
-    - We suggest having some level of technical knowledge or a willingness to learn, so you can make the most out of FOSSBilling.
-    - Before updating, kindly review the release notes to familiarize yourself with the new and improved features.
-    - Knowing a bit about PHP and software development could be beneficial, not only to contribute to FOSSBilling's growth but also to troubleshoot any issues you might encounter.
-</p>
-<h3>Let's Grow Together! 🌱</h3>
-<p>We genuinely believe in the potential of FOSSBilling and are thrilled about the community around it. Any support, be it through contributions, feedback, or donations, can significantly accelerate our journey towards the release of FOSSBilling 1.0.0! Your generosity helps fuel development and brings us closer to realizing our vision.
-
-If you find value in what we are building and would like to support us, please consider making a donation. Every bit helps, and we are grateful for your support.
-
-Ready to Dive In? 🚀
-Feel free to explore, experiment, and let us know what you think. We're here to help, learn, and grow together in making FOSSBilling the best it can be. Your engagement and insights are invaluable in bringing this project to life.
-
-Thank you for being part of our exciting journey. Let's create something amazing together!</p>
+    <p className="subtitle">Welcome to the FOSSBilling Download Page! 🎉 <br />    We're excited to have you here! We are on the journey towards the release of version 1.0.0, and we're working hard to make FOSSBilling ready for production use.<br />Please bear in mind a few key points as you consider downloading:</p>
+    <p>- FOSSBilling is in its dynamic pre-production phase, which means some features are still under development.<br />- We suggest having some level of technical knowledge or a willingness to learn, so you can make the most out of FOSSBilling.<br />- Before updating, kindly review the release notes to familiarize yourself with the new and improved features.<br />- Knowing a bit about PHP and software development could be beneficial, not only to contribute to FOSSBilling's growth but also to troubleshoot any issues you might encounter.</p>
+    <h3>Let's Grow Together! 🌱</h3>
+    <p>We genuinely believe in the potential of FOSSBilling and are thrilled about the community around it. Any support, be it through contributions, feedback, or donations, can significantly accelerate our journey towards the release of FOSSBilling 1.0.0! Your generosity helps fuel development and brings us closer to realizing our vision.</p>
+    <p>If you find value in what we are building and would like to support us, please consider [becoming a sponsor](https://opencollective.com/FOSSBilling). <br /> Every bit helps, and we are grateful for your support.</p>
   </div>
-
   <div className="features-container">
     <div className="content-container">
       <Features>
@@ -66,11 +51,9 @@ Thank you for being part of our exciting journey. Let's create something amazing
   </div>
   <div className="home-content">
     <div className="content-container">
-<p>  Ready to Dive In? 🚀
-  Feel free to explore, experiment, and let us know what you think. We're here to help, learn, and grow together in making FOSSBilling the best it can be. Your engagement and insights are invaluable in bringing this project to life.<br >
-
-  Thank you for being part of our exciting journey. Let's create something amazing together!</p>
-    </div>
+    <h3>Ready to Dive In? 🚀<h43>
+    <p>Feel free to explore, experiment, and let us know what you think. We're here to help, learn, and grow together in making FOSSBilling the best it can be. Your engagement and insights are invaluable in bringing this project to life.<br /> Thank you for being part of our exciting journey. Let's create something amazing together!</p>
+  </div>
 </div>
 
 export const getStaticProps = ({ params }) => {
@@ -100,4 +83,5 @@ export const ReleasedOn = () => {
   // Get the data from SSG, and render it as a component.
   const { released_on } = useSSG()
   return <Date dateString={released_on} />
+
 }
