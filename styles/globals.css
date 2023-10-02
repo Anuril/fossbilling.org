@@ -40,6 +40,16 @@
   margin-top: 3.4rem;
   line-height: 1.1;
 }
+.headlineSmall {
+  font-size: 1.5rem;
+  font-size: min(2.5rem, max(8vw, 1.5rem));
+  font-weight: 400;
+  font-feature-settings: initial;
+  letter-spacing: -.12rem;
+  margin-left: -0.2rem;
+  margin-top: 3.4rem;
+  line-height: 1.1;
+}
 .subtitle {
   font-size: 1.3rem;
   font-size: min(1.3rem, max(3.5vw, 1.2rem));
